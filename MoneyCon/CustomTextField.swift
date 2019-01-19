@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import QuartzCore
 
 class CustomTextField: UITextField {
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0)
+    }
+    
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
