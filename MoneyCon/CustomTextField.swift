@@ -14,6 +14,7 @@ class CustomTextField: UITextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0)
+        layer.cornerRadius = 5
     }
     
     

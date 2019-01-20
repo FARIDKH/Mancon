@@ -29,22 +29,22 @@ extension UIView {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var homeSegmentedControl: UISegmentedControl!
     @IBOutlet var registartionViews: [UIView]!
     @IBOutlet weak var registerConstraint: NSLayoutConstraint!
     @IBOutlet weak var logInConstraint: NSLayoutConstraint!
     @IBOutlet weak var registerContainerView: UIView!
     @IBOutlet weak var logInContainerView: UIView!
     @IBOutlet weak var logInRegisterButton: UIButton!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var selectedTag:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpSegmentedControl()
-        registerContainerView.isHidden = true
-        logInContainerView.isHidden = false
-        
+//        setUpSegmentedControl()
+//        registerContainerView.isHidden = true
+//        logInContainerView.isHidden = false
+//        
         setUpButton()
         for i in self.registartionViews{
             i.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(registerViewTapped(tag:))))
@@ -52,6 +52,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     
     
     @objc func registerViewTapped(tag: Int){
@@ -64,15 +69,15 @@ class ViewController: UIViewController {
     }
     
     func setUpSegmentedControl(){
-        segmentedControl.setTitle("Log In", forSegmentAt: 0)
-        segmentedControl.setTitle("Register", forSegmentAt: 1)
-        segmentedControl.backgroundColor = .clear
-        segmentedControl.tintColor = .white
-        segmentedControl.addTarget(self, action: #selector(segmenedControlPressed), for: .allEvents)
+        homeSegmentedControl.setTitle("Log In", forSegmentAt: 0)
+        homeSegmentedControl.setTitle("Register", forSegmentAt: 1)
+        homeSegmentedControl.backgroundColor = .clear
+        homeSegmentedControl.tintColor = .white
+        homeSegmentedControl.addTarget(self, action: #selector(segmenedControlPressed), for: .allEvents)
     }
     
     @objc func segmenedControlPressed(){
-        switch self.segmentedControl.selectedSegmentIndex {
+        switch self.homeSegmentedControl.selectedSegmentIndex {
         case 0:
             logInRegisterButton.setTitle("Sign In", for: .normal)
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {

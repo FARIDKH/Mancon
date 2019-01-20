@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51707FB021F3E23900EE54AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51707FAF21F3E23900EE54AC /* HomeViewController.swift */; };
+		51707FB421F3F65E00EE54AC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51707FB321F3F65E00EE54AC /* RegistrationViewController.swift */; };
+		51707FB621F4AE9400EE54AC /* IncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51707FB521F4AE9400EE54AC /* IncomeViewController.swift */; };
+		51707FB821F4AF0E00EE54AC /* IncomeCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51707FB721F4AF0E00EE54AC /* IncomeCustomView.swift */; };
 		5172A85B21F253FB00BC38C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172A85A21F253FB00BC38C1 /* AppDelegate.swift */; };
-		5172A85D21F253FB00BC38C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172A85C21F253FB00BC38C1 /* ViewController.swift */; };
 		5172A86021F253FB00BC38C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5172A85E21F253FB00BC38C1 /* Main.storyboard */; };
 		5172A86321F253FB00BC38C1 /* MoneyCon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5172A86121F253FB00BC38C1 /* MoneyCon.xcdatamodeld */; };
 		5172A86521F253FC00BC38C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5172A86421F253FC00BC38C1 /* Assets.xcassets */; };
@@ -16,7 +19,6 @@
 		5172A87321F253FD00BC38C1 /* MoneyConTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172A87221F253FD00BC38C1 /* MoneyConTests.swift */; };
 		5172A87E21F253FD00BC38C1 /* MoneyConUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172A87D21F253FD00BC38C1 /* MoneyConUITests.swift */; };
 		5172A88C21F381F200BC38C1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172A88B21F381F200BC38C1 /* CustomTextField.swift */; };
-		5172A88E21F3B04800BC38C1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172A88D21F3B04800BC38C1 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51707FAF21F3E23900EE54AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		51707FB321F3F65E00EE54AC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		51707FB521F4AE9400EE54AC /* IncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeViewController.swift; sourceTree = "<group>"; };
+		51707FB721F4AF0E00EE54AC /* IncomeCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeCustomView.swift; sourceTree = "<group>"; };
 		5172A85721F253FB00BC38C1 /* MoneyCon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyCon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5172A85A21F253FB00BC38C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5172A85C21F253FB00BC38C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5172A85F21F253FB00BC38C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5172A86221F253FB00BC38C1 /* MoneyCon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyCon.xcdatamodel; sourceTree = "<group>"; };
 		5172A86421F253FC00BC38C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +57,6 @@
 		5172A87D21F253FD00BC38C1 /* MoneyConUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyConUITests.swift; sourceTree = "<group>"; };
 		5172A87F21F253FD00BC38C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5172A88B21F381F200BC38C1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		5172A88D21F3B04800BC38C1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +107,12 @@
 		5172A85921F253FB00BC38C1 /* MoneyCon */ = {
 			isa = PBXGroup;
 			children = (
+				51707FAF21F3E23900EE54AC /* HomeViewController.swift */,
 				5172A85A21F253FB00BC38C1 /* AppDelegate.swift */,
-				5172A85C21F253FB00BC38C1 /* ViewController.swift */,
 				5172A85E21F253FB00BC38C1 /* Main.storyboard */,
-				5172A88D21F3B04800BC38C1 /* RegisterView.swift */,
+				51707FB721F4AF0E00EE54AC /* IncomeCustomView.swift */,
+				51707FB521F4AE9400EE54AC /* IncomeViewController.swift */,
+				51707FB321F3F65E00EE54AC /* RegistrationViewController.swift */,
 				5172A88B21F381F200BC38C1 /* CustomTextField.swift */,
 				5172A86421F253FC00BC38C1 /* Assets.xcassets */,
 				5172A86621F253FC00BC38C1 /* LaunchScreen.storyboard */,
@@ -265,11 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51707FB421F3F65E00EE54AC /* RegistrationViewController.swift in Sources */,
 				5172A88C21F381F200BC38C1 /* CustomTextField.swift in Sources */,
-				5172A88E21F3B04800BC38C1 /* RegisterView.swift in Sources */,
-				5172A85D21F253FB00BC38C1 /* ViewController.swift in Sources */,
 				5172A86321F253FB00BC38C1 /* MoneyCon.xcdatamodeld in Sources */,
+				51707FB621F4AE9400EE54AC /* IncomeViewController.swift in Sources */,
+				51707FB821F4AF0E00EE54AC /* IncomeCustomView.swift in Sources */,
 				5172A85B21F253FB00BC38C1 /* AppDelegate.swift in Sources */,
+				51707FB021F3E23900EE54AC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
