@@ -17,13 +17,6 @@ extension UIView {
             
         }, completion: nil)
         
-        let animation = CABasicAnimation(keyPath: "shadowOpacity")
-        animation.fromValue = 0
-        animation.toValue = 2
-        animation.duration = 2.0
-        layer.add(animation, forKey: animation.keyPath)
-        layer.shadowOffset = CGSize(width: 3, height: 3)
-        layer.cornerRadius = 5
     }
     
     func removeShadow(){
@@ -82,7 +75,7 @@ class RegistrationViewController: UIViewController,UIGestureRecognizerDelegate,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpGestures()
+        //setUpGestures()
         setUpDelegates()
     }
     

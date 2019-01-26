@@ -13,6 +13,7 @@ import UIKit
 
 class HomeViewController : UIViewController {
     
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var homeScrollView: UIScrollView!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var homeSegmentedControl: UISegmentedControl!
@@ -27,12 +28,12 @@ class HomeViewController : UIViewController {
         setUpSegmentedControl()
         signUpContainerView.isHidden = true
         signInContainerView.isHidden = false
-        
         setUpButton()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
     
     
     @objc func keyboardWillShow(notification:NSNotification){
@@ -68,9 +69,18 @@ class HomeViewController : UIViewController {
     }
     
     @objc func segmenedControlPressed(){
+        var scrollViewHeight = homeScrollView.frame.height
+        let scrollViewWidth = homeScrollView.frame.width
+        var padding: CGFloat = 0
+        if view.frame.height > 667 {
+            padding = 100
+        } else {
+            padding = 200
+        }
         switch self.homeSegmentedControl.selectedSegmentIndex {
         case 0:
             submitButton.setTitle("Sign In", for: .normal)
+            scrollViewHeight -= padding
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
                 self.signInContainerView.isHidden = false
                 self.signUpContainerView.isHidden = true
@@ -81,19 +91,24 @@ class HomeViewController : UIViewController {
             break
         case 1:
             submitButton.setTitle("Sign Up", for: .normal)
+//            print("1)")
+//            print(scrollViewHeight)
+//            print("2)")
+//            print(signUpContainerView.frame.height)
+            
+            scrollViewHeight += padding
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
                 self.signInContainerView.isHidden = true
                 self.signUpContainerView.isHidden = false
                 self.logInConstraint.priority = .defaultLow
                 self.signUpConstraint.priority = .defaultHigh
             }, completion: nil)
-            
-            
-            
             break
         default:
             break
         }
+        homeScrollView.contentSize = CGSize(width: scrollViewWidth, height: scrollViewHeight)
+        
     }
     
     
